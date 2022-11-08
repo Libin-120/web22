@@ -8,7 +8,7 @@
  <center>
 	<h1>CARMELAGIRI BOARDING HOUSE</h1>
 	<h1>MUNNAR</h1>
-	<img src="C:\Users\libin\OneDrive\Desktop\Hostelmangement\carmelagiri.jpg" width="100%" height="300px">
+	<img src="carmelagiri.jpg" width="100%" height="300px">
  </center>
 </div>
 
@@ -16,9 +16,9 @@
     	<header>
         <nav>
           <ul>
-            <li><a href="file:///C:/Users/libin/OneDrive/Desktop/Hostelmangement/homepage.html">Home</a></li>
-            <li><a href="file:///C:/Users/libin/OneDrive/Desktop/Hostelmangement/about_us.html">About</a></li>
-            <li><a href="file:///C:/Users/libin/OneDrive/Desktop/Hostelmangement/contact_us.html">Contact</a></li>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
             <li><a href="https://www.google.com/search?q=carmelagiri+public+school+munnar&rlz=1C1GEWG_enIN1012IN1013&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjXsbKyxpT7AhUTZ2wGHdu_DaIQ_AUoAnoECAEQBA&biw=1280&bih=601&dpr=1.5">Gallery</a></li>
           </ul>
         </nav>
@@ -32,6 +32,26 @@
           </ul>
         </nav>
         </div>
+
+        <div>
+  <video width="420" height="340" controls autoplay muted>
+  <source src="carmelagiri_video.mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+  <h3>Students' Talk</h3>
+  <audio controls autoplay muted>
+  <source src="carmelagiri_audio.mp3" type="audio/mpeg">
+  </audio>
+</div>
+<div>
+  <audio controls autoplay muted>
+  <source src="carmelagiri_audio2.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div>
     <div>
     	<center>
 		<h3>OUR OTHER HOSTELS</h3>
@@ -40,27 +60,27 @@
 
     <div>
   <div>
-    <img src="C:\Users\libin\OneDrive\Desktop\Hostelmangement\viswadeepthi.jpg" width="30%" height="30%">
+    <img src="viswadeepthi.jpg" width="30%" height="30%">
     <a href="http://viswadeepthi.com/">
         <h4>VISVADEEPTHI BOARDING HOUSE, ADIMALY</h4>
     </a>
   </div>
   <div>
-    <img src="C:\Users\libin\OneDrive\Desktop\Hostelmangement\carmel.jpeg" width="30%" height="30%">
+    <img src="carmel.jpeg" width="30%" height="30%">
     <a href="http://www.carmelpublicschool.com/">
         <h4>CARMEL BOARDING HOUSE, VAZHAKULAM</h4>
     </a>
   </div>
   <div>
-    <img src="C:\Users\libin\OneDrive\Desktop\Hostelmangement\girijyothi.jpg" width="30%" height="30%">
+    <img src="girijyothi.jpg" width="30%" height="30%">
     <a href="https://school.careers360.com/schools/girijyothi-cmi-public-school-vazhathope-idukki">
         <h4>GIRIJYOTHI BOARDING HOUSE, IDUKKI</h4>
     </a>
   </div>
 </div>
 
-<div>
-	<h3>Rate Us</h3>
+
+  <h3>Rate Us</h3>
 <form>
   <input type="radio" id="E" name="rate_us" value="5">
   <label for="E">5</label><br>
@@ -74,7 +94,7 @@
   <label for="P">1</label>
 </form>
 <div>
-	<h3>What do you Like in Carmelagiri Boarding House?</h3>
+  <h3>What do you Like in Carmelagiri Boarding House?</h3>
 <form>
   <input type="checkbox" id="f1" name="feedback" value="IS">
   <label for="f1">Infrastructure</label><br>
@@ -84,22 +104,51 @@
   <label for="vehicle3">Environment</label><br>
   <input type="checkbox" id="f4" name="feedback" value="N">
   <label for="f2"> Nothing</label><br><br>
-  <input type="submit" value="Submit">
 </form>
 </div>
+
 
 <div>
   <h3>Feedback</h3>
   <form>
-  <label for="F_B">Feedback:</label><br>
-  <input type="text" id="F_B" name="F_B"><br>
+  <textarea name="textarea" placeholder="Talk to us " cols="30" rows="05" aria-invalid="false" style="box-shadow: 5px 0px 15px -5px #0F0F0F; font-size: 16px; padding: 20px 0px 20px 0px;"></textarea><br>
   <label for="name">Name:</label><br>
   <input type="text" id="name" name="name"><br>
+    <label for="Phone Number">Phone:</label><br>
+  <input type="tel" id="name" name="name"><br>
   <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email"><br><br>
-  <input type="submit" value="Submit">
+  <input type="email" id="email" name="email"><br><br>
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date"><br><br>
+
+</form>
 </form>
 </div>
+<div>
+  <p>Click the button for your Location.</p>
+  <button onclick="getLocation()">Show Location</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+  <input type="submit" value="Submit">
+  </div>
 
 <div>
     <h2 style="color: #5F9EA0"><i>Contact</i></h2>
@@ -118,7 +167,7 @@
    <footer>
     <center>
     	<h3>Follow us on</h3>
-        <img src="C:\Users\libin\OneDrive\Desktop\Hostelmangement\imgmap (2).png"usemap="#workmap">
+        <img src="imgmap (2).png"usemap="#workmap">
         <p>Copyright ©2022 Carmelagiri Hostel, Inc. All rights reserved.Privacy & Legal Policies</p>
     </center>
     <map name="workmap">
