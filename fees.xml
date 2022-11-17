@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="fees.xsl"?>
+    <FEES>
+        <fees_details>
+            <fid>101</fid>
+            <category>Accommodation</category>
+            <type>Single</type>
+            <price>25000</price>
+            <year>1 Semester</year>
+            <description>Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>102</fid>
+            <category>Accommodation</category>
+            <type>Two Share</type>
+            <price>20000</price>
+            <year>1 Semester</year>
+            <description>Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>103</fid>
+            <category>Accommodation</category>
+            <type>Three Share</type>
+            <price>15000</price>
+            <year>1 Semester</year>
+            <description>Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>104</fid>
+            <category>Other Fees</category>
+            <type>Mess</type>
+            <price>40000</price>
+            <year>1 Year</year>
+            <description>Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>105</fid>
+            <category>Other Fees</category>
+            <type>Admission</type>
+            <price>5000</price>
+            <year>1 Year</year>
+            <description>Non_Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>106</fid>
+            <category>Other Fees</category>
+            <type>Establishment</type>
+            <price>5000</price>
+            <year>1 Year</year>
+            <choice>Compulsory</choice>
+            <description>Non_Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>107</fid>
+            <category>Other Fees</category>
+            <type>Maintenance</type>
+            <price>10000</price>
+            <year>1 Year</year>
+            <description>Non_Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>108</fid>
+            <category>Optional Fees</category>
+            <type>Sports and Games</type>
+            <price>500</price>
+            <year>1 Month</year>
+            <description>Non_Refundable</description>
+        </fees_details>
+        <fees_details>
+            <fid>109</fid>
+            <category>Optional Fees</category>
+            <type>Tution</type>
+            <price>2000</price>
+            <year>1 Month</year>
+            <description>Non_Refundable</description>
+        </fees_details>
+    </FEES>
+
+
+
