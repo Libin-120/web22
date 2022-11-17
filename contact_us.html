@@ -2,53 +2,141 @@
 <html>
 <head>
 <title >hostelmanagment</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
+<div class="header">
+  <br>
+  <img src="logo1.png" width="20%" height="55px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="homepage.html" id="links">HOME</a>
+  &nbsp;&nbsp;
+  <a href="about_us.html" id="links">AOUT US</a>
+   &nbsp;&nbsp;
+   <a href="contact_us.html" id="links">CONTACT US</a>
+     &nbsp;&nbsp;
+   <a href="https://www.google.com/search?q=carmelagiri+public+school+munnar&rlz=1C1GEWG_enIN1012IN1013&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjXsbKyxpT7AhUTZ2wGHdu_DaIQ_AUoAnoECAEQBA&biw=1280&bih=601&dpr=1.5" id="links">GALLERY</a>
+   &nbsp;&nbsp;
+   <a href="#" id="links">LOGIN</a>
+ </div>
+   <div>
  <center>
-	<h1>CARMELAGIRI BOARDING HOUSE</h1>
-	<h1>MUNNAR</h1>
-	<img src="carmelagiri.jpg" width="100%" height="300px">
- </center>
+    <img src="img1.jpg" width="100%" height="300px">
+  </center>
 </div>
 
-    <div>
-        <nav>
-          <ul>
-            <li><a href="homepage.html">Home</a></li>
-            <li><a href="about_us.html">About</a></li>
-            <li><a href="contact_us.html">Contact</a></li>
-            <li><a href="https://www.google.com/search?q=carmelagiri+public+school+munnar&rlz=1C1GEWG_enIN1012IN1013&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjXsbKyxpT7AhUTZ2wGHdu_DaIQ_AUoAnoECAEQBA&biw=1280&bih=601&dpr=1.5">Gallery</a></li>
-          </ul>
-        </nav>
-    </div>
+<div class="row">
+    <div class="column">
 
-    <div>
-    <center>
-    <h2 style="color: #5F9EA0"><i>Contact Details</i></h2>
-    </center>
-    </div>
-    <div>
+<h3>Rate Us</h3>
+<form>
+  <input type="radio" id="E" name="rate_us" value="5">
+  <label for="E">5</label><br>
+  <input type="radio" id="VG" name="rate_us" value="4">
+  <label for="VG">4</label><br>
+  <input type="radio" id="G" name="rate_us" value="3">
+  <label for="G">3</label><br>
+  <input type="radio" id="AV" name="rate_us" value="2">
+  <label for="AV">2</label><br>
+  <input type="radio" id="P" name="rate_us" value="1">
+  <label for="P">1</label>
+</form>
+
+
+  <h3>What do you Like in Carmelagiri Boarding House?</h3>
+<form>
+  <input type="checkbox" id="f1" name="feedback" value="IS">
+  <label for="f1">Infrastructure</label><br>
+  <input type="checkbox" id="f2" name="feedback" value="HP">
+  <label for="f2"> Hospitality</label><br>
+  <input type="checkbox" id="f3" name="feedback" value="EV">
+  <label for="vehicle3">Environment</label><br>
+  <input type="checkbox" id="f4" name="feedback" value="N">
+  <label for="f2"> Nothing</label><br><br>
+</form>
+</div>
+
+
+<div class="column">
+  <h3>Feedback</h3>
+  <form>
+  <textarea name="textarea" placeholder="Talk to us " cols="30" rows="12" aria-invalid="false" style="box-shadow: 5px 0px 15px -5px #0F0F0F; font-size: 16px; padding: 20px 0px 20px 0px;"></textarea><br>
+</form>
+</div>
+<div class="column">
+    <h3>Your Details</h3>
+    <form>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+    <label for="Phone Number">Phone:</label><br>
+  <input type="tel" id="name" name="name"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date"><br><br>
+</form>
+
+
+  <p>Click the button for your Location.</p>
+  <button onclick="getLocation()">Show Location</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+  <input type="submit" value="Submit">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="box">
+  <div class="center">
+    <h2 style="color: #000080">Contact</h2>
     <p>Carmelagiri Boarding House<br>
     Munnar P.O<br>
     Mattupetty, pin: 685515<br>
     Idukki District, Kerala, India<br>
     Ph:0486 662324, 9961210798
-    <h4><u>Mail: carmelagiri@gmail.com</u></h4>
+    <h4><u>Mail: carmelagiri@gmail.com</u></h4></p>
    </div>
-   <div>
-
-<img id="scream" src="carmelagiri_pencil.jpg" alt="The Scream" width="500" height="277">
-
+ </div>
+ 
+  <div class="container1">
+        <div class="boxx"><img src="img1.jpg"></div>
+        <div class="boxx"><img src="img2.jpg"></div>
+        <div class="boxx"><img src="img3.jpg"></div>
+        <div class="boxx"><img src="carmelagiri.jpg"></div>
+    
 </div>
 
-   <div>
-    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=carmelagiri cmi public school&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://formatjson.org/">format json</a></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style></div>
-</div>
-   <footer>
-    <center>
+
+   <footer class="footer1">
+    <center><br>
         <h3>Follow us on</h3>
         <img src="imgmap (2).png"usemap="#workmap">
+        <p>Copyright ©2022 Carmelagiri Hostel, Inc. All rights reserved.Privacy & Legal Policies</p><br>
     </center>
     <map name="workmap">
         <area shape="rect" coords="31,37,83,96" alt="Facebook" href="https://www.facebook.com/caramelagiri/">
@@ -57,5 +145,9 @@
         <area shape="rect" coords="250,41,321,86" alt="youtube" href="https://www.youtube.com/channel/UCfw3CvJpDBG5iXbiMBuF4gQ">
       </map>
   </footer>
+
+
+  
+
 </body>
 </html>
