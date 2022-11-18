@@ -7,6 +7,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <body>
   <center>
   <h2>FEES DETAILS</h2>
+
   <table border="2">
     <tr bgcolor="#9acd32">
       <th>Fid</th>
@@ -28,7 +29,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </xsl:for-each>
   </table>
 
-<h2>FEES DETAILS SORTED BY TYPE</h2>
+<h2>FEES DETAILS SORTED BY TYPE(sort)</h2>
   <table border="2">
     <tr bgcolor="#9acd32">
       <th>Fid</th>
@@ -51,7 +52,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </xsl:for-each>
   </table>
 
-<h2>FEES > 10000</h2>
+<h2>FEES > 10000(if)</h2>
 <table border="2">
     <tr bgcolor="#9acd32">
       <th>Fid</th>
@@ -74,7 +75,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </xsl:for-each>
   </table>
 
-
+<h2>Non Refundable Fees(choose)</h2>
 <table border="2">
     <tr bgcolor="#9acd32">
       <th>Fid</th>
@@ -87,17 +88,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:for-each select="FEES/fees_details">
     <tr>
       <td bgcolor="#5F9EA0"><xsl:value-of select="fid"/></td>
+      <td bgcolor="#5F9EA0"><xsl:value-of select="category"/></td>
      <xsl:choose>
-      <xsl:when test="price>15000">
+      <xsl:when test="description='Non_Refundable'">
          <td bgcolor="#ff00ff">
-         <xsl:value-of select="category"/>
+         <xsl:value-of select="type"/>
          </td>
       </xsl:when>
       <xsl:otherwise>
-         <td><xsl:value-of select="category"/></td>
+         <td><xsl:value-of select="type"/></td>
       </xsl:otherwise>
       </xsl:choose>
-      <td bgcolor="#5F9EA0"><xsl:value-of select="type"/></td>
       <td bgcolor="#A9A9A9"><xsl:value-of select="price"/></td>
       <td bgcolor="#5F9EA0"><xsl:value-of select="year"/></td>
       <td bgcolor="#A9A9A9"><xsl:value-of select="description"/></td>
