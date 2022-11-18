@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FEES SYSTEM "fees.dtd">
 <?xml-stylesheet type="text/xsl" href="fees.xsl"?>
     <FEES>
         <fees_details>
@@ -75,6 +76,10 @@
             <description>Non_Refundable</description>
         </fees_details>
     </FEES>
+
+
+
+
 
 
 
