@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!doctype FEES [
+<!ELEMENT FEES (fees_details)>
 <!ELEMENT fees_details (fid,category,type,price,year,description)>
 <!ELEMENT fid (#PCDATA)>
 <!ELEMENT category (#PCDATA)>
@@ -7,4 +6,3 @@
 <!ELEMENT price (#PCDATA)>
 <!ELEMENT year(#PCDATA)>
 <!ELEMENT description(#PCDATA)>
-]>
