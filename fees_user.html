@@ -36,11 +36,11 @@ function loadXMLDoc() {
     if (this.readyState == 4 && this.status == 200) {
     	parser = new DOMParser();
         xmlDoc = parser.parseFromString(this.responseText,"text/xml");
-        for(var a=0;xmlDoc.getElementsByTagName("cat_id")[a].childNodes[0].nodeValue!=null;a++)
+        for(var a=0;xmlDoc.getElementsByTagName("fid")[a].childNodes[0].nodeValue!=null;a++)
         {
             b++;
             document.getElementById("demo").innerHTML +="<tr id=row"+a+"><td><input type='number' value="+
-                xmlDoc.getElementsByTagName("cat_id")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("category")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("type")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("price")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("year")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("description")[a].childNodes[0].nodeValue+"></td><td><button type=button name=remove id="+a+" class=btn btn-danger btn_remove1 onclick=remove(id)>X</button></td></tr>";
+                xmlDoc.getElementsByTagName("fid")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("category")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("type")[a].childNodes[0].nodeValue+"></td><td><input type='number' value="+xmlDoc.getElementsByTagName("price")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("year")[a].childNodes[0].nodeValue+"></td><td><input type='text' value="+xmlDoc.getElementsByTagName("description")[a].childNodes[0].nodeValue+"></td><td><button type=button name=remove id="+a+" class=btn btn-danger btn_remove1 onclick=remove(id)>X</button></td></tr>";
             }
         }
     };
