@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title >hostelmanagment</title>
+<link rel="stylesheet" href="style.css">
+<script>
+
+    function validateForm() {
+      let x = document.forms["form1"]["name"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+
+      
+      var xx=document.form1.email.value;  
+        var atposition=xx.indexOf("@");  
+        var dotposition=xx.lastIndexOf(".");  
+        if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+            alert("Please enter a valid e-mail address");  
+            return false;  
+        } 
+
+    }
+
+    </script>
+</head>
+<body>
+
+  <div class="box5">
+
+    <h2 style="color: #000080">Enter Your Details</h2>
+
+    <form name="form1" action="/action_page.php" onsubmit="return validateForm()"  action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <textarea name="textarea" placeholder="Address " cols="30" rows="05" aria-invalid="false" style="box-shadow: 5px 0px 15px -5px #0F0F0F; font-size: 16px; padding: 20px 0px 20px 0px;"></textarea><br><br>
+        Email: <input type="text" name="email"><br><br>
+        <label for="Phone Number">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="uname">Username:</label>
+        <input type="text" id="uname" name="uname" required><br><br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+</html>
