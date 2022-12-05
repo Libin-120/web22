@@ -1,29 +1,126 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-<title >hostelmanagment</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Login form with JavaScript Validation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<style type="text/css">
+  body {
+  background: #f2f2f2;
+}
+
+.text-center {
+  text-align: center;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix {
+  display: block;
+}
+a {
+  color: #0b0d0d;
+}
+
+button {
+  cursor: pointer;
+  background: #12322b;
+  width: 30%;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 20px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid #d9d9d9;
+  padding: 10px 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.wrapper {
+  width: 320px;
+  background: #fff;
+  margin: 20px auto;
+  min-height: 200px;
+  border: 1px solid #f3f3f3;
+}
+.wrapper .inner-warpper {
+  padding: 50px 30px 60px;
+  box-shadow: 1px 1.732px 10px 0px rgba(0, 0, 0, 0.063);
+}
+.wrapper .title {
+  margin-top: 0;
+}
+.wrapper .supporter {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8E8E8E;
+  cursor: pointer;
+}
+</style>
+
+
+
+
+
+<script type="text/javascript">
+function validate()
+{
+  var name=document.getElementById("userName").value;
+  var pwd=document.getElementById("userPassword").value;
+  if(name.length<6 || pwd.length<6)
+    alert("Username and password should be atleast minimum 6 characters long");
+  else
+    alert("You're logged in");
+}
+</script>
 </head>
 <body>
-<div class="header">
-  <br>
-  <img src="logo1.png" width="20%" height="55px">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <a href="homepage.html" id="links">HOME</a>
-  &nbsp;&nbsp;
-  <a href="about_us.html" id="links">AOUT US</a>
-   &nbsp;&nbsp;
-   <a href="contact_us.html" id="links">CONTACT US</a>
-     &nbsp;&nbsp;
-   <a href="https://www.google.com/search?q=carmelagiri+public+school+munnar&rlz=1C1GEWG_enIN1012IN1013&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjXsbKyxpT7AhUTZ2wGHdu_DaIQ_AUoAnoECAEQBA&biw=1280&bih=601&dpr=1.5" id="links">GALLERY</a>
-   &nbsp;&nbsp;
-   <a href="login.html" id="links">LOGIN</a>
-</div>
 
-  <div class="box5">
-    <h2 style="color: #000080">Login</h2>
-  <label for="name">Username:</label>
-  <input type="text" id="name" name="name"><br><br>
- <label for="pwd">Password:</label>
- <input type="password" id="pwd" name="pwd">
-   </div>
- </div>
+<br>
+<br>
+
+<div class="wrapper">
+  <div class="inner-warpper text-center">
+    <h2 class="title">Login</h2>
+    <form action="program1.html" id="formvalidate">
+      <div class="input-group">
+        <input class="form-control" name="userName" id="userName" type="text" placeholder="User Name" required/>
+        <span class="lighting"></span>
+      </div>
+      <div class="input-group">
+        <input class="form-control" name="userPassword" id="userPassword" type="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{6,10}$" title="atleast 1 uppercase, 1 lowercase,1 digit and 1 special character" required/>
+        <span class="lighting"></span>
+      </div>
+
+      <button type="submit" id="login" onclick="validate()">Login</button>
+      <div class="clearfix supporter">
+        <a class="forgot pull-left" href="registration.html">Register</a>
+        <a class="forgot pull-right" href="#">Forgot Password</a>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
