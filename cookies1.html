@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        body {
+        background: #f2f2f2;
+      }
+      
+      .text-center {
+        text-align: center;
+      }
+      .pull-left {
+        float: left;
+      }
+      .pull-right {
+        float: right;
+      }
+      .clearfix {
+        display: block;
+      }
+      a {
+        color: #0b0d0d;
+      }
+      
+      button {
+        cursor: pointer;
+        background: #aab3b1;
+        width: 20%;
+        border: 0;
+        padding: 10px 15px;
+        color: rgb(119, 87, 87);
+        font-size: 10px;
+        -webkit-transition: 0.3s linear;
+        transition: 0.3s linear;
+      }
+      
+      .input-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+      
+      .input-group input {
+        outline: none;
+        display: block;
+        margin-left: 20px;
+       
+        width: 80%;
+        height: 30px;
+        position: relative;
+        z-index: 3;
+        border: 1px solid #d9d9d9;
+        padding: 10px 10px;
+        background: #ffffff;
+        box-sizing: border-box;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+      }
+      
+      .wrapper {
+        width: 320px;
+        background: #fff;
+        margin: 20px auto;
+        min-height: 200px;
+        border: 1px solid #f3f3f3;
+      }
+      .wrapper .inner-warpper {
+        padding: 50px 30px 60px;
+        box-shadow: 1px 1.732px 10px 0px rgba(0, 0, 0, 0.063);
+      }
+      .wrapper .title {
+        margin-top: 0;
+      }
+      .wrapper .supporter {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #8E8E8E;
+        cursor: pointer;
+      }
+      </style>
+    
+</head>
+<body>
+	 <div class="wrapper">
+            <div class="form">
+                <center><div id="sendmessage"> STUDENT DETAILS</div></center><br>
+              <div id="errormessage"></div>
+              <form method="post" role="form" class="contactForm">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    &nbsp;&nbsp;&nbsp;<label>Full Name</label>
+                    <div class="input-group"><input type="text" name="name" class="form-control" id="name" placeholder="Student Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" /></div>
+                    
+                  </div>
+                  <div class="form-group col-lg-6">
+                    &nbsp;&nbsp;&nbsp;<label>Email</label>
+                    <div class="input-group"><input type="text" class="form-control" name="email" id="email" placeholder="abc@email.com" data-rule="email" data-msg="Please enter a valid email" /></div>
+                    
+                  </div>
+                </div>
+                <div class="form-group">
+                    &nbsp;&nbsp;&nbsp;<label>Password</label>
+                    <div class="input-group"><input type="text" class="form-control" name="password" id="password" placeholder="1UCase,1LCase,1SplChar,1Number"   /></div>
+                 
+                </div>
+                <div class="form-group">
+                    &nbsp;&nbsp;&nbsp;<label>Phone Number</label>
+                    <div class="input-group"><input type="text" class="form-control" name="phone" id="phone" placeholder="phone" oninput="phones()"   /></div>
+                  
+                </div>
+                <div class="form-group">
+                    &nbsp;&nbsp;&nbsp;<label>Department</label>
+                    <div class="input-group"><input type="text" class="form-control" name="subject" id="subject" placeholder="Department" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" /></div>
+                  
+                </div>
+                <div class="form-group">
+                    &nbsp;&nbsp;&nbsp;<label>Permanent Address</label>
+                    <div class="input-group">&nbsp;&nbsp;&nbsp;&nbsp;<textarea class="form-control" name="message" rows="5" cols="32" data-rule="required" id="msg" data-msg="Please write something for us" placeholder="Address"></textarea></div>
+                  
+                  &nbsp;&nbsp;&nbsp;&nbsp;<p style="display:inline-block;">Theme</p>
+                <input type="radio" name="color" id="color" value="#f7e7b0" style="accent-color: #f7e7b0;" checked> 
+                <input type="radio" name="color" id="color" value="#baf2a2" style="accent-color: #baf2a2;"> 
+                <input type="radio" name="color" id="color" value="#f2a2a7" style="accent-color: #f2a2a7;"> 
+
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<p style="display:inline-block;">Image</p>
+                <lable>1</lable><input type="radio" name="img" id="imgs" value="head1.png"  checked> 
+                <lable>2</lable>
+                <input type="radio" name="img" id="imgs2" value="head2.jpg" checked > 
+
+                  
+                </div>
+                <div class="text-center"><button onclick="val()" type="submit" title="Send Message">Send</button></div>
+              </form>
+            </div>
+          </div>
+
+</body>
+
+
+
+
+
+<script>
+
+
+	//function to check phone number
+function phones()
+ {
+  var ph=document.getElementById("phone").value;
+  if(ph>9999999999)
+  {
+    document.getElementById("phone").value=ph.slice(0,-1);
+  }
+  if(isNaN(ph))
+  {
+    document.getElementById("phone").value=ph.slice(0,-1);
+  }
+ }
+
+	// function to set cookie
+	function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+
+
+
+//function to count number of times page visited
+
+if (sessionStorage.clickcount) {
+  sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+  document.getElementById("viewcount").innerHTML=Number(sessionStorage.clickcount)+" Page visits by you";
+} else {
+  sessionStorage.clickcount = 1;
+}
+
+
+
+//function to validate form and set cookie , local storage value 
+
+function val()
+   { var res="";
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var phone=document.getElementById("phone").value;
+    var password=document.getElementById("password").value;
+    var subject=document.getElementById("subject").value;
+    var msg=document.getElementById("msg").value;
+    var colors=document.querySelector('input[name="color"]:checked').value;
+    var img=document.querySelector('input[name="img"]:checked').value;
+    
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+    {
+     
+
+    }
+    else
+    {
+    res=res+"mail Invalid\n";
+    
+    }
+
+  var passpattern =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+        var password = document.getElementById('password').value;
+
+        if(!password.match(passpattern)) {
+            res=res+"Password Invalid\n";
+           
+        }
+        if(phone=="")
+        {
+          res=res+"Phone number is empty\n";
+        }
+        if(name=="")
+        {
+          res=res+"Name is empty\n";
+        }
+        if(subject=="")
+        {
+          res=res+"Subject is empty\n";
+        }
+
+if(res!="")
+{
+  alert(res);
+   }
+   else
+   {
+   	//the below one is used to clearr the old cookies
+    document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+    //below code is to set values to the cookies 
+    setCookie("name",name,2);
+    setCookie("email",email,2);
+    setCookie("phone",phone,2);
+    setCookie("color",colors,2);
+    setCookie("img",img,2);
+
+    //to set values in local storage
+
+    localStorage.setItem("subject",subject);
+    localStorage.setItem("message",msg);
+
+
+    
+alert("Form submitted successfully");
+   }
+}
+
+
+	
+</script>
+</html>
