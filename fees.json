@@ -1,0 +1,7 @@
+[ 
+{"id":1,"category":"Accommodation","price":25000,"duration":"1-Sem"},
+{"id":2,"category":"Mess","price":40000,"duration":"1-Sem"},
+{"id":3,"category":"Admission","price":10000,"duration":"1-Year"},
+{"id":4,"category":"Establishment","price":5000,"duration":"1-Year"},
+{"id":5,"category":"Maintenance","price":10000,"duration":"1-Year"},
+{"id":6,"category":"Sports","price":2000,"duration":"1-Month"}]
