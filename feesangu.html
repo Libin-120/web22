@@ -1,0 +1,114 @@
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Fees Details</title>
+  
+    <!-- INCLUDING JQUERY-->
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+  
+    <!-- CSS FOR STYLING THE PAGE -->
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 3px solid black;
+        }
+  
+        h1 {
+            text-align: center;
+            background-color: #a7eb7d;
+            color: #003f66;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 
+                'Gill Sans MT', ' Calibri', 
+                'Trebuchet MS', 'sans-serif';
+        }
+  
+        td {
+            background-color: #7debbb;
+            border: 2px solid black;
+        }
+
+        th {
+            background-color: #99e1f1;
+            border: 2px solid black;
+        }
+  
+        th,
+        td {
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        
+        }
+  
+        td {
+            font-weight:bolder;
+        }
+    </style>
+</head>
+  
+<body>
+    <section>
+        <h1>Fees Details</h1>
+
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table'>
+            <!-- HEADING FORMATION -->
+            <tr>
+                <th>ID</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Duration</th>
+            </tr>
+  
+            <script>
+                $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("fees.json", 
+                            function (data) {
+                        var fees = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            fees += '<tr>';
+                            fees += '<td>' + 
+                                value.id + '</td>';
+  
+                            fees += '<td>' + 
+                                value.category + '</td>';
+  
+                            fees += '<td>' + 
+                                value.price + '</td>';
+  
+                            fees += '<td>' + 
+                                value.duration + '</td>';
+  
+                            fees += '</tr>';
+
+                            fees.changemarks = function (values) {
+        angular.forEach(values, function (value, key) {
+          value.price += 10;
+          console.log(value.category + ' ' + value.price);
+        });
+      };
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(fees);
+                    });
+                });
+            </script>
+    </section>
+</body>
+  
+</html>
