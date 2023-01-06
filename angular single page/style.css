@@ -1,0 +1,233 @@
+
+#heading1{
+	color:black;
+	font-family: cursive;
+}
+
+#heading2{
+	color:#000080;
+	font-family: helvetica;
+	font-weight: bold;
+  background-color:   #fdf5e6;
+}
+
+.header{
+	background-color: 	#b0e0e6;
+	font-style: bold;
+	height: 80px
+}
+
+
+
+.head{
+	background-color: 	#fdf5e6;
+	font-style: bold;
+	font-family: helvetica; 
+	height: 60px;
+	color:white;
+    padding: 01px;
+    font-size:100%;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+}
+
+#links{
+	color: #000080;
+    margin-left: 17px;
+    padding: 05px;
+    font-size:80%;
+    font-family: helvetica; 
+    text-decoration: none;
+    border: 1px;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+a:hover, a:active{
+	color: purple;
+	background-color: #ffefd5;
+}
+
+
+body{
+	background-color:	#e6e6fa;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  width: 25.3%;
+  padding: 06px;
+  margin-top: 2px;
+  margin-left: 80px;
+  margin-right: 01px;
+  text-decoration: none;
+}
+ 
+
+.column1 {
+  float: left;
+  width: 34.3%;
+  padding: 05px;
+  margin-top: 02px;
+  margin-left: 20px;
+  margin-right: 0px
+
+}
+
+.column2 {
+  float: left;
+  width: 5.3%;
+  padding: 2px;
+  margin-left: 1px;
+  margin-right: 2px
+}
+
+#links2{
+	color: #00008b;
+    padding: 05px;
+    font-size:100%;
+    font-family: helvetica; 
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links3{
+	color: #00008b;
+    padding: 02px;
+    font-size:80%;
+    font-family: helvetica; 
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+
+.center{
+	text-align: center; 
+}
+
+
+.mapouter{
+	position:relative;
+	width:300px;
+	height:200px;
+}
+
+.gmap_canvas{
+	overflow:hidden;
+	background:none!important;
+	width:300px;
+	height:200px;
+	}
+
+.gmap_iframe{
+	width:300px!important;
+	height:200px!important;
+}
+
+.box{
+	background-color: #e09914;
+	padding: 10px;
+	margin:30px;
+	margin-left: 5px;
+	width:1235px;
+	box-sizing: border-box;
+	**background-image: url("carmelagiri_pencil.jpg");
+}
+
+.box5{
+  background-color: #fdf5e6;
+  padding: 75px;
+  margin:30px;
+  margin-left: 400px;
+  width:400px;
+  box-sizing: border-box;
+  **background-image: url("carmelagiri_pencil.jpg");
+}
+
+.box2{
+    color: black;
+    font-size:110%;
+    font-family: cursive; 
+    font-weight: bold;
+    
+}
+
+.footer1 {
+  background: #000080;
+  color: white;
+}
+
+.box3{
+	background-color: #fdf5e6;
+	padding: 10px;
+	margin:30px;
+	margin-left: 100px;
+	width:300px;
+	box-sizing: border-box;
+	color: #000080;
+   font-family: cursive; 
+    font-weight: bold;
+	**background-image: url("carmelagiri_pencil.jpg");
+}
+
+
+table, th, td {
+  border:1px groove black;
+  border-collapse: collapse;
+}
+
+.box4 {
+	color: black;
+	border: 10px;
+	border-left: 20px;
+	width:1000px;
+    padding: 10px;
+    font-size:110%;
+    margin-left: 20px;
+    font-family: cursive; 
+    font-weight: bold;
+    float: left;
+}
+
+
+.container1{
+        width:90%;
+        padding: 10px;
+        margin:50px auto;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+    }
+    .boxx{
+        width: 250px ; 
+        margin:0 10px;
+        transition: 1s ;
+
+    }
+
+    .boxx img{
+        display: block;
+        width:100%;
+        border-radius: 10px;
+    }  
+
+    .boxx:hover{
+      transform:scale(1.5);
+    }
+
+
+
+ 

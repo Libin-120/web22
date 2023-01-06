@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="style.css">
+<body ng-app="myApp">
+
+<div class="header">
+<br>
+<img src="logo1.png" width="20%" height="55px">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="#/!" id="links">Home</a>
+<a href="#!feesdetails" id="links">Fees Details</a>
+<a href="#!roomdetails" id="links">Room Details</a>
+<a href="#!studentdetails" id="links">Students Details</a>
+<a href="#!search" id="links">Employee Details</a>
+</div>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "homepage.html",
+    })
+    .when("/feesdetails", {
+        templateUrl : "feesdetails.html",
+        controller : "feesCtrl"
+    })
+    .when("/roomdetails", {
+        templateUrl : "roomdetails.html",
+        controller : "roomCtrl"
+    })
+    .when("/studentdetails", {
+        templateUrl : "studentdetails.html",
+        controller : "studentController"
+    })
+    .when("/search", {
+        templateUrl : "test.html",
+        controller : "myCont"
+    });
+});
+app.controller("feesCtrl", function ($scope) {
+    $scope.msg = "This is the Fees Details of Carmelagiri Boarding House";
+});
+app.controller("roomCtrl", function ($scope) {
+    $scope.msg = "This is the Room Details of Carmelagiri Bourding House";
+});
+
+app.controller('studentController', function($scope, $http) {                 
+    $http({
+        method: 'GET',
+        url: 'student.json'
+        })
+        .then(function successCallback(response) {
+            $scope.studentdetails = response.data;
+        }, function errorCallback(response) {
+            console.log('Something went wrong.');
+        }); 
+});
+var myController = function ($scope)
+     {
+        var Employee = [
+          {
+            FirstName: "Mohan",LastName: "Lal",Gender: "Male",Address: "Kerala",
+          },
+          {
+               FirstName: "Jithu",LastName: "George",Gender: "Male",Address: "Thamilnadu",
+          },
+          {
+               FirstName: "Minu",LastName: "Raj",Gender: "Female",Address: "MP",
+          },
+          {
+               FirstName: "Alona",LastName: "John",Gender: "Female",Address: "UP",
+          },
+          {
+               FirstName: "Karun",LastName: "Babu",Gender: "Male",Address: "Delhi",
+          }];
+     $scope.Emp = Employee;
+     };
+app.controller("myCont", myController);
+
+</script>
+
+</body>
+</html>

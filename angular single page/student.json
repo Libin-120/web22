@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Neha", 
+        "course":"MCA",
+        "phone":"9987675437",
+        "room":"001"
+    },
+    {
+        "name":"Midhun", 
+        "course":"MBA",
+        "phone":"9487666438",
+        "room":"012"
+    },
+    {
+        "name":"Linjo", 
+        "course":"Mcom",
+        "phone":"9887677899",
+        "room":"011"
+    },
+    {
+        "name":"John", 
+        "course":"BCA",
+        "phone":"9987675437",
+        "room":"008"
+    },
+    {
+        "name":"Raju", 
+        "course":"BBA",
+        "phone":"9988975444",
+        "room":"020"
+    }
+]
